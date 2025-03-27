@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative h-[85%] w-[85%] rounded-full overflow-hidden glass-effect shadow-xl">
                   <img
-                    src="/public/pot.jpg"
+                    src="/pot.jpg"
                     alt="Premium honey jar"
                     className="h-full w-full object-cover object-center"
                   />
