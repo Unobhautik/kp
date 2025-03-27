@@ -1,28 +1,11 @@
-# Welcome to your Lovable project
+Welcome to Kalpraj
 
-## Project info
+How to Edit This Code?
+There are several ways to edit and customize your application.
 
-**URL**: https://lovable.dev/projects/e3452745-d57b-4138-be4f-35c9596ea146
+Use Your Preferred IDE
+If you want to work locally using your own IDE, follow these steps:
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/e3452745-d57b-4138-be4f-35c9596ea146) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
 # Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
 
@@ -34,36 +17,72 @@ npm i
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-```
+Edit a File Directly in GitHub
+Navigate to the desired file(s).
 
-**Edit a file directly in GitHub**
+Click the "Edit" button (pencil icon) at the top right of the file view.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
+Use GitHub Codespaces
+Navigate to the main page of your repository.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Click on the "Code" button (green button) near the top right.
 
-## What technologies are used for this project?
+Select the "Codespaces" tab.
 
-This project is built with .
+Click on "New codespace" to launch a new Codespace environment.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## How can I deploy this project?
+What Technologies Are Used in This Project?
+This project is built with:
 
-Simply open [Lovable](https://lovable.dev/projects/e3452745-d57b-4138-be4f-35c9596ea146) and click on Share -> Publish.
+Vite
 
-## I want to use a custom domain - is that possible?
+TypeScript
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+React
+
+ShadCN-UI
+
+Tailwind CSS
+
+How to Deploy This Project?
+You can deploy this project using platforms like Netlify, Vercel, or GitHub Pages.
+
+Deploy to Netlify
+Create an account on Netlify if you don’t have one.
+
+Connect your GitHub repository.
+
+Select the branch to deploy.
+
+Configure the build command:
+
+
+npm run build
+Set the publish directory to dist.
+
+Click "Deploy" and wait for your site to go live.
+
+Deploy to Vercel
+Create an account on Vercel.
+
+Import your project from GitHub.
+
+Select the branch and framework (Vite + React).
+
+Deploy and get your live URL.
+
+How to Use a Custom Domain?
+To use your own domain, follow these steps:
+
+Purchase a domain from Namecheap, GoDaddy, or Google Domains.
+
+If using Netlify/Vercel, go to the Custom Domains section.
+
+Add your domain and update the DNS settings in your domain provider’s dashboard.
+
+Wait for DNS propagation, and your site will be live on your custom domain!
+
