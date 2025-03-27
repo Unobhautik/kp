@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
           <img 
             src="/kp.jpg" 
             alt="KalpRaj Logo" 
-            className="h-12 w-24 object-contain bg-white rounded-md"
+            className="h-12 w-24 object-contain"
           />
             
         </Link>          
