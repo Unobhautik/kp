@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Transition from '../components/Transition';
 import { Send, MapPin, Phone, Mail } from 'lucide-react';
@@ -82,7 +81,12 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-honey-900 mb-1">Phone</h3>
-                      <p className="text-honey-700/80">(123) 456-7890</p>
+                      <a 
+                        href="tel:+919510653527" 
+                        className="text-honey-700/80 hover:text-honey-900 transition-colors"
+                      >
+                        +91 95106 53527
+                      </a>
                       <p className="text-honey-700/80">Mon-Fri, 9am-5pm EST</p>
                     </div>
                   </div>
@@ -93,8 +97,12 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-honey-900 mb-1">Email</h3>
-                      <p className="text-honey-700/80">contact@kalpraj.com</p>
-                      <p className="text-honey-700/80">support@kalprajhoney.com</p>
+                      <a 
+                        href="mailto:kalpraj9510@gmail.com" 
+                        className="text-honey-700/80 hover:text-honey-900 transition-colors"
+                      >
+                        kalpraj9510@gmail.com
+                      </a>
                     </div>
                   </div>
                 </div>
