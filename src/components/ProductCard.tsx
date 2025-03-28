@@ -31,11 +31,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         onClick={() => setIsOpen(true)}
       >
         {/* Product Image */}
-        <div className="relative aspect-square overflow-hidden">
+        <div className="relative aspect-square overflow-hidden flex items-center justify-center bg-honey-50">
           <img
             src={product.imageUrl}
             alt={product.name}
-            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           
@@ -45,7 +45,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
         </div>
 
-        {/* Product Info */}
+        {/* Rest of the card remains the same */}
         <div className="p-5 space-y-3">
           <div className="flex justify-between items-start">
             <h3 className="font-serif font-medium text-lg text-honey-900">{product.name}</h3>
@@ -53,7 +53,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
           <p className="text-honey-700/80 text-sm line-clamp-2">{product.description}</p>
           
-          {/* View on Amazon Button */}
           <a
             href={product.amazonUrl}
             target="_blank"
@@ -65,7 +64,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </a>
         </div>
         
-        {/* Buy Button (Appears on Hover) */}
+        {/* Buy Button */}
         <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out bg-gradient-to-t from-white via-white to-transparent pt-12">
           <a
             href={product.amazonUrl}
@@ -81,19 +80,21 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
       {/* Detailed Product Dialog */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-3xl bg-white p-0 rounded-2xl overflow-hidden">
-          <div className="grid md:grid-cols-2 h-full">
+        <DialogContent 
+          className="max-w-3xl bg-white p-0 rounded-2xl overflow-hidden h-[90vh] max-h-[900px]"
+        >
+          <div className="grid md:grid-cols-2 h-full overflow-hidden">
             {/* Product Image */}
-            <div className="relative h-60 md:h-full bg-honey-50">
+            <div className="relative h-60 md:h-full bg-honey-50 flex items-center justify-center p-4">
               <img
                 src={product.imageUrl}
                 alt={product.name}
-                className="w-full h-full object-cover object-center"
+                className="max-w-full max-h-full object-contain"
               />
             </div>
             
             {/* Product Details */}
-            <div className="p-6 flex flex-col">
+            <div className="p-6 flex flex-col overflow-y-auto">
               <DialogHeader>
                 <DialogTitle className="text-2xl font-serif text-honey-900">{product.name}</DialogTitle>
                 <div className="flex items-center justify-between">
@@ -121,7 +122,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 </p>
               </div>
               
-              <div className="mt-6 space-y-3">
+              <div className="mt-6 space-y-3 sticky bottom-0 bg-white pt-4">
                 <a
                   href={product.amazonUrl}
                   target="_blank"
