@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import Features from '../components/Features';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index: React.FC = () => {
@@ -27,7 +27,7 @@ const Index: React.FC = () => {
               <div className="space-y-2 text-center md:text-left">
                 <h2 className="text-3xl md:text-4xl font-bold text-honey-900">Our Featured Products</h2>
                 <p className="text-honey-700/80 max-w-xl">
-                  Browse our selection of premium quality Indian honey products.
+                  Browse our selection of premium quality honey products.
                 </p>
               </div>
               <Link
@@ -56,30 +56,42 @@ const Index: React.FC = () => {
             <div className="text-center mb-12 space-y-2">
               <h2 className="text-3xl md:text-4xl font-bold text-honey-900">What Our Customers Say</h2>
               <p className="text-honey-700/80 max-w-xl mx-auto">
-                Read testimonials from our satisfied customers across India.
+                Read testimonials from our satisfied customers.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  quote: "The best honey I've ever tasted! Pure, raw, and full of flavor. I’ll never go back to store-bought.",
-                  author: "Kaplesh P.",
-                  location: "Palanpur, Banaskantha"
+                  quote: "मैंने कई honey brands को try किया है लेकिन इस pure honey का taste और quality is simply amazing. Daily use के लिए perfect है!",
+                  author: "Priya Sharma",
+                  location: "Mumbai, Maharashtra",
+                  rating: 5
                 },
                 {
-                  quote: "I love how transparent this company is about their sourcing. The wildflower honey is incredible on my morning toast.",
-                  author:  "Palanpur, Banaskantha",
-                  location: ""
+                  quote: "This Manuka honey has helped me so much with my sore throat. मेरे परिवार के सभी सदस्य अब इसे regular use करते हैं. Totally worth the price!",
+                  author: "Rajesh Patel",
+                  location: "Bangalore, Karnataka",
+                  rating: 5
                 },
                 {
-                  quote: "Their organic honey helped soothe my sore throat during the monsoon season. A bit pricey but worth every rupee.",
-                  author: "Ravi P.",
-                  location: "Delhi"
+                  quote: "100% natural और organic honey. मैं इसे अपनी चाय में हर रोज use करती हूँ। The company's transparency about their sourcing is what I appreciate the most.",
+                  author: "Ananya Gupta",
+                  location: "New Delhi, Delhi",
+                  rating: 4
                 }
               ].map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-honey-100 relative">
                   <div className="absolute -top-4 left-8 text-5xl text-honey-400">"</div>
+                  <div className="flex items-center mb-3">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star 
+                        key={i} 
+                        size={16} 
+                        className={i < testimonial.rating ? "fill-honey-400 text-honey-400" : "text-honey-200"} 
+                      />
+                    ))}
+                  </div>
                   <p className="text-honey-800 mb-6 relative z-10">
                     {testimonial.quote}
                   </p>
@@ -103,7 +115,7 @@ const Index: React.FC = () => {
           <div className="container px-6 md:px-10 max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Experience the Difference Today</h2>
             <p className="text-honey-100/80 max-w-2xl mx-auto mb-8">
-              Try our premium Indian honey products and taste the difference that quality makes.
+              Try our premium honey products and taste the difference that quality makes.
             </p>
             <Link
               to="/products"
