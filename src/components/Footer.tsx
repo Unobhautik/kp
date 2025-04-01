@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
               <span className="h-8 w-8 rounded-full bg-honey-500 flex items-center justify-center">                 
                 <span className="inline-block">🍯</span>               
               </span>               
-              <span className="text-xl font-serif font-bold">Kalpraj Honey</span>             
+              <img src="/kp.jpg" alt="Kalpraj Honey" className="h-8" />             
             </Link>             
             <p className="text-honey-100/80 text-sm max-w-xs">               
               Bringing the finest natural honey from our hives to your home since 2018.             
