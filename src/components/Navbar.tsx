@@ -5,16 +5,16 @@ import { Menu, X } from 'lucide-react';
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-10 ${
@@ -24,14 +24,19 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="text-xl md:text-2xl font-serif font-bold text-honey-800 flex items-center gap-2"
+          className="flex items-center gap-2"
         >
           <span className="h-8 w-8 rounded-full bg-honey-400 flex items-center justify-center">
             <span className="inline-block animate-spin-slow">🍯</span>
           </span>
-          <span>Pure Honey</span>
+          {/* Added logo image here */}
+          <img 
+            src="/kp.jpg" 
+            alt="Pure Honey" 
+            className="h-8 md:h-10"
+          />
         </Link>
-
+        
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <NavLink to="/">Home</NavLink>
@@ -40,7 +45,7 @@ const Navbar: React.FC = () => {
           <NavLink to="/about">About Us</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </nav>
-
+        
         {/* Mobile Menu Button */}
         <button
           className="block md:hidden"
@@ -54,7 +59,7 @@ const Navbar: React.FC = () => {
           )}
         </button>
       </div>
-
+      
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 glass-effect p-5 shadow-lg md:hidden">
