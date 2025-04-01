@@ -1,15 +1,18 @@
 import React from 'react';
 import Transition from '../components/Transition';
-import { products } from '../data/products';
-import { ImageIcon, Star, User } from 'lucide-react';
 
 const GalleryPage: React.FC = () => {
-  // Collect all product images
-  const productImages = products.map(product => ({
-    id: product.id,
-    name: product.name,
-    imageUrl: product.imageUrl
-  }));
+  // Create an array of image data for b1 to b8
+  const galleryImages = [
+    { id: 1, name: 'Honey Product 1', imageUrl: '/b1.jpeg' },
+    { id: 2, name: 'Honey Product 2', imageUrl: '/b2.jpeg' },
+    { id: 3, name: 'Honey Product 3', imageUrl: '/b3.jpeg' },
+    { id: 4, name: 'Honey Product 4', imageUrl: '/b4.jpeg' },
+    { id: 5, name: 'Honey Product 5', imageUrl: '/b5.jpeg' },
+    { id: 6, name: 'Honey Product 6', imageUrl: '/b6.jpeg' },
+    { id: 7, name: 'Honey Product 7', imageUrl: '/b7.jpeg' },
+    { id: 8, name: 'Honey Product 8', imageUrl: '/b8.jpeg' },
+  ];
 
   return (
     <Transition>
@@ -28,7 +31,7 @@ const GalleryPage: React.FC = () => {
         <section className="py-16 bg-white">
           <div className="container px-6 md:px-10 max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
-              {productImages.map((item) => (
+              {galleryImages.map((item) => (
                 <div key={item.id} className="aspect-square rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group">
                   <div className="w-full h-full relative">
                     <img 
