@@ -1,0 +1,66 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kalpraj",
+    "url": "https://kalpraj.in",
+    "logo": "https://kalpraj.in/logo.png",
+    "description": "Kalpraj is a premium provider of raw, unfiltered honey varieties including Ajwain, Suva, Til, and Fennel sourced from sustainable apiaries.",
+    "slogan": "Experience Nature's Liquid Gold",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "[Palanpur]",
+      "addressRegion": "[Gujarat]",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "[Phone Number]",
+      "contactType": "customer service",
+      "email": "[Email]"
+    },
+    "sameAs": [
+      "[Facebook URL]",
+      "[Instagram URL]"
+    ],
+    "offers": {
+      "@type": "AggregateOffer",
+      "offers": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Ajwain Raw Honey",
+            "description": "Pure, unfiltered Ajwain honey sourced from sustainable apiaries",
+            "category": "Food & Beverages > Honey"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Suva Raw Honey",
+            "description": "Pure, unfiltered Suva honey sourced from sustainable apiaries",
+            "category": "Food & Beverages > Honey"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Til Raw Honey",
+            "description": "Pure, unfiltered Til honey sourced from sustainable apiaries",
+            "category": "Food & Beverages > Honey"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Fennel Raw Honey",
+            "description": "Pure, unfiltered Fennel honey sourced from sustainable apiaries",
+            "category": "Food & Beverages > Honey"
+          }
+        }
+      ]
+    }
+  }
